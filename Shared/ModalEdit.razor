@@ -1,0 +1,76 @@
+<div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    style="display: block">
+    <div class="modal-dialog-centered modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Item</h5>
+                <button type="button" @onclick="@ModalCancel" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="key-number" class="col-form-label">InstallKey:</label>
+                        <input type="text" class="form-control" id="key-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="enterprise-name" class="col-form-label">Nome</label>
+                        <input type="text" class="form-control" id="enterprise-name">
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div>
+                                <label for="controllers"># Control</label>
+                                <input type="email" class="controllers">
+                            </div>
+                        </div>
+                        <div class="col-4" align-self="center">
+                            <div>
+                                <label for="license-model">Modelo</label>
+                                <select class="form-select" id="license-model">
+                                    <option selected>Selecione uma opção</option>
+                                    <option value="1">Option1</option>
+                                    <option value="2">Option2</option>
+                                    <option value="3">Option3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="blocked">
+                                <label class="form-check-label" for="blocked">
+                                    Bloqueado
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal"
+                    @onclick="@ModalCancel">Cancelar</button>
+                <button type="button" class="btn btn-primary" @onclick="@ModalSave">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code
+{
+
+    [Parameter]
+    public EventCallback<bool> ModalDisplayEdit { get; set; }
+
+    private Task ModalSave()
+    {
+        return ModalDisplayEdit.InvokeAsync(true);
+    }
+
+    private Task ModalCancel()
+    {
+        return ModalDisplayEdit.InvokeAsync(false);
+    }
+
+}

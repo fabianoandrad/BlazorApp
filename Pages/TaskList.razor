@@ -1,0 +1,47 @@
+@page "/task"
+
+<h1>Lista de Tarefas</h1>
+
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Nova Tarefa" @bind="newTodo">
+    <div class="input-group-append">
+        <button class="btn btn-outline-primary" type="button" id="button-addon2" @onclick="AddNewTask">Salvar</button>
+    </div>
+</div>
+
+<div>
+    @foreach (var item in todos)
+    {
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    <input type="checkbox" @bind="item.IsDone">
+                </div>
+            </div>
+            <input type="text" class="form-control" @bind="item.Title">
+        </div>
+    }
+</div>
+
+
+@code
+{
+    public class TodoItem
+    {
+        public string Title { get; set; } = "t";
+        public bool IsDone { get; set; }
+    }
+
+    private string newTodo = "";
+    private List<TodoItem> todos = new List<TodoItem>();
+
+    void AddNewTask()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem { Title = newTodo });
+            newTodo = "";
+        }
+        //Console.WriteLine("passei aqui");
+    }
+}

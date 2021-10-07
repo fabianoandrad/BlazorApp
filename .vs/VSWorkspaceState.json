@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pages"
+    "\\Pages",
+    "\\Shared"
   ],
-  "SelectedNode": "\\Pages\\Index.razor",
+  "SelectedNode": "\\Shared\\ModalDelete.razor",
   "PreviewInSolutionExplorer": false
 }

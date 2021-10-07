@@ -1,0 +1,13 @@
+@page "/test"
+
+@model BlazorApp.Pages.ErrorModel
+
+
+<div>
+                @if (Model.ShowRequestId)
+            {
+                <p>
+                    <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                </p>
+            }
+</div>

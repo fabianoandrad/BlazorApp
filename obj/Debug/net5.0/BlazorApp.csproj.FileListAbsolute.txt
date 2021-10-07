@@ -56,5 +56,12 @@ C:\projetos\blazor\blazorApp\obj\Debug\net5.0\ref\BlazorApp.dll
 C:\projetos\blazor\blazorApp\obj\Debug\net5.0\BlazorApp.pdb
 C:\projetos\blazor\blazorApp\obj\Debug\net5.0\BlazorApp.genruntimeconfig.cache
 C:\projetos\blazor\blazorApp\obj\Debug\net5.0\BlazorApp.csproj.CopyComplete
-C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Test.razor.g.cs
-C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Pages\Test.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\TaskList.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Pages\TaskList.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\ListLicense.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Pages\ListLicense.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\ModalEdit.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Shared\ModalEdit.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\ModalDelete.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Shared\ModalDelete.razor.g.cs
+C:\Projetos\Blazor\BlazorApp\obj\Debug\net5.0\Razor\Pages\Test.cshtml.g.cs

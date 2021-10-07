@@ -13,70 +13,70 @@ namespace BlazorApp.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 4 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 5 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 6 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 7 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 8 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 9 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 10 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 11 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 12 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using BlazorApp;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
+#line 13 "C:\Projetos\Blazor\BlazorApp\_Imports.razor"
 using BlazorApp.Shared;
 
 #line default
@@ -95,9 +95,13 @@ using BlazorApp.Shared;
        
     private int currentCount = 0;
 
+    [Parameter]
+    public int IncrementAmount { get; set; } = 1;
+
     private void IncrementCount()
     {
-        currentCount++;
+        //currentCount++;
+        currentCount += IncrementAmount;
     }
 
 #line default

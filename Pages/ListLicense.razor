@@ -1,0 +1,116 @@
+@page "/listLicence"
+
+<h1>Listas</h1>
+
+<div style="overflow-x: auto">
+    <table class="table table">
+        <thead class="table-light">
+            <tr style="text-align:center">
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>Status</th>
+                <th>InstallKey</th>
+                <th>Criado em</th>
+                <th>Empreendimento</th>
+                <th>LicenseKey</th>
+                <th># Controladoras</th>
+                <th>Valido até</th>
+                <th>Modelo</th>
+                <th>Atualizado em</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><button class="btn btn-outline-danger" type="button" @onclick="() => ModalDeleteVisible()">
+                        <i class="fas fa-trash-alt"></i>
+                    </button></td>
+                <td><button class="btn btn-outline-dark" type="button" @onclick="() => ModalEditVisible()">
+                        <i class="fas fa-edit"></i>
+                    </button></td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px"><i class="fas fa-ban"
+                        style="font-size: 30px; color: red"></i></td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">
+                    41fd85f9-d7b1-4834-9a6e-f9242d608940</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">2021-09-16T14:31:30</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">Demonstração</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">GEtS7Ij2yyyP8Y9Ccw==</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">1</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">2021-10-16T14:31:30</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">Free</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">0001-01-01T00:00:00</td>
+            </tr>
+            <tr>
+                <td><button class="btn btn-outline-danger" type="button" @onclick="() => ModalDeleteVisible()">
+                        <i class="fas fa-trash-alt"></i>
+                    </button></td>
+                <td><button class="btn btn-outline-dark" type="button" @onclick="() => ModalEditVisible()">
+                        <i class="fas fa-edit"></i>
+                    </button></td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px"><i class="far fa-check-circle"
+                        style="font-size: 30px; color: green"></i></td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">
+                    41fd85f9-d7b1-4834-9a6e-f9242d608940</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">2021-09-16T14:31:30</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">Demonstração</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">tS7IjyP8FC4wY9Ccw==</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">14</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">2021-10-16T14:31:30</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">Trial</td>
+                <td style="vertical-align: middle; text-align: center; font-size: 12px">0001-01-01T00:00:00</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+@if (ModalEdit)
+{
+    <div>
+        <ModalEdit ModalDisplayEdit="@ModalInvisible" />
+    </div>
+}
+
+@if (ModalDel)
+{
+    <div>
+        <ModalDelete ModalDisplayDelete="@ModalInvisible" />
+    </div>
+}
+
+@code
+{
+
+    public bool ModalEdit { get; set; }
+    public bool ModalDel { get; set; }
+
+    private void ModalInvisible(bool accepted)
+    {
+        ModalEdit = false;
+        ModalDel = false;
+        SaveList(accepted);
+    }
+
+    private void ModalEditVisible()
+    {
+        ModalEdit = true;
+    }
+
+    private void ModalDeleteVisible()
+    {
+        ModalDel = true;
+    }
+
+    // Metodo pra salvar lista
+    private void SaveList(bool saveOk)
+    {
+        if (saveOk)
+        {
+            //TODO salvar alterações feitas
+            Console.WriteLine(saveOk);
+        }
+        else
+        {
+            Console.WriteLine("Cancelado...");
+        }
+    }
+
+}
